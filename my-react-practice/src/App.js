@@ -12,7 +12,7 @@ function App() {
     }
     
     setTodo("");
-    //변경된 todo 를 현재 배열에 넣는 구문 ...+배열명
+    //변경된 todo 를 현재 배열에 넣는 구문 ...+ 배열명
     setTodos((currentArray) => [toDo , ...currentArray]);
   };
   return (
@@ -22,6 +22,8 @@ function App() {
         <input value={toDo} onChange={onChange} type="text" placeholder="내용을 입력해주삼"/>
         <button>Add</button>
       </form>
+      <hr/>
+      <ul>{toDos.map((item, index)=><li key={index}>{item}</li>)}</ul>
     </div>
   );
 }
