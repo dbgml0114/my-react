@@ -1,0 +1,125 @@
+.radio_cont{
+    width: 100%;    
+    .tlt{
+        margin-top: 20px;
+        font-size: 20px;
+        margin-bottom: 14px;        
+    }
+    .align{
+        display: flex;
+    }
+    .rdo_box{
+        flex:1;
+        height: 50px;
+        position: relative;
+        input[type=radio]{
+            opacity: 0;
+            left: 0;
+            position: absolute;
+            &:checked{
+                &+label{
+                    background-color: tomato;
+                    border-color: tomato;
+                    color: #fff;
+                }
+            }
+        }
+        label{
+            border: 1px solid lightgray;
+            width: 100%;
+            text-align: center;
+            height: 100%;
+            font-size: 20px;
+            color: #000;
+            align-items: center;
+            justify-content: center;
+            display: inline-flex;
+        }
+    }
+}
+
+.mid_container{
+    padding: 20px;
+    .radio_cont{
+        input[type=radio]{
+            &:checked{
+                &+label{
+                    background-color:#fff;
+                    border: 1px solid tomato;
+                    color: tomato;
+                    font-weight: 700;
+                    
+                }
+            }
+        }
+        label{
+            font-size: 16px;
+            border: 1px solid lightgray;
+        }
+    }
+
+    .chk_box{
+        &+.chk_box{
+            margin-left: 10px;
+        }
+    }
+    .option_cont{
+        margin-top: 20px;
+        ul{
+            li{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                border: 1px solid #dcdcdc;
+                padding: 8px 16px;
+                min-height: 54px;
+                &+li{
+                    border-top: 0 ;
+                }
+                .lgt{
+                    flex: 1;
+                }
+                .rgt{
+                    //flex: 1;
+                    align-items: center;
+                    justify-content: center;
+                    display: inline-flex;
+                }
+            }
+        }
+    }
+}
+
+.counter_box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .lgt{
+        flex: 1;
+    }
+    .rgt{
+        //flex: 1;
+        align-items: center;
+        justify-content: center;
+        display: inline-flex;
+    }
+    &+.counter_box{
+        border-top: 0;
+    }
+
+    button.btn_count{
+        width: 36px;
+        height: 36px;
+        font-size: 24px;
+        background-color: #f1f1f1;
+        border-radius: 50%;
+    }
+
+    .count{
+        font-size: 16px;
+        margin: 0 10px;
+    }
+}
+
